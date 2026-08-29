@@ -14,6 +14,9 @@ function buttonClickHandler() {
     xhr.onprogress = function () {
         console.log("On progress");
     }
+    xhr.onreadystatechange = function () {
+        console.log("Ready state is ", xhr.readyState);
+    }
 
     //what to do when response is ready
     xhr.onload = function () {
